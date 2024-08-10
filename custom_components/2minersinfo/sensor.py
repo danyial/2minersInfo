@@ -53,6 +53,8 @@ from .const import (
     SOLO_CTXC_API_ENDPOINT,
     CKB_API_ENDPOINT,
     SOLO_CKB_API_ENDPOINT,
+    KAS_API_ENDPOINT,
+    SOLO_KAS_API_ENDPOINT,
     COINGECKO_API_ENDPOINT,
     COINGECKO_API_CURRENCY,
     ATTR_ACTIVE_WORKERS,
@@ -310,6 +312,13 @@ class InfoSensor(Entity):
               self.api_endpoint = SOLO_ZEN_API_ENDPOINT
             else:
               self.api_endpoint = ZEN_API_ENDPOINT
+        if self.token.lower() == "kas":
+            self._icon = "mdi:alpha-k-circle-outline"
+            self.token_name = "kaspa"
+            if self.solo.lower() == "true":
+              self.api_endpoint = SOLO_KAS_API_ENDPOINT
+            else:
+              self.api_endpoint = KAS_API_ENDPOINT
 
     def _update(self):
         walleturl = (

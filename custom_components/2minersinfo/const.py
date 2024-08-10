@@ -68,6 +68,8 @@ CTXC_API_ENDPOINT = "https://ctxc.2miners.com/api"
 SOLO_CTXC_API_ENDPOINT = "https://solo-ctxc.2miners.com/api"
 CKB_API_ENDPOINT = "https://ckb.2miners.com/api"
 SOLO_CKB_API_ENDPOINT = "https://solo-ckb.2miners.com/api"
+KAS_API_ENDPOINT = "https://kas.2miners.com/api"
+SOLO_KAS_API_ENDPOINT = "https://solo-kas.2miners.com/api"
 
 COINGECKO_API_ENDPOINT = "https://api.coingecko.com/api/v3/simple/price?ids="
 COINGECKO_API_CURRENCY = "&vs_currencies="
