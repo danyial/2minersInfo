@@ -102,10 +102,10 @@ Multiple addresses can be configured.
 You can create a template sensor for any of the attributes returned by 2minersInfo. For example:
 
 Current hashrate:
-```{{ states.sensor.2minersinfo_miner_address.attributes['current_hashrate'] }}```
+```{{ (state_attr('sensor.2minersinfo_miner_address', 'current_hashrate')|int / 1000000000)|round(2, 'floor') }}```
 
 Unpaid amount:
-```{{ states.sensor.2minersinfo_miner_address.attributes['unpaid'] }}```
+```{{ (state_attr('sensor.2minersinfo_miner_address', 'unpaid')|int / 100000000)|round(6, 'floor') }}```
 
 ## How does it look?
 
